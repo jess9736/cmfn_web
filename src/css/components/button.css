@@ -1,0 +1,15 @@
+#from_button_login {
+  /* Style pour le bouton */
+
+  background-color: #007bff; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Supprime la bordure */
+  padding: 10px 20px; /* Espacement intérieur (haut/bas gauche/droite) */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur au survol */
+}
+
+/* Effet de survol pour le bouton */
+.button:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
