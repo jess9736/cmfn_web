@@ -1,17 +1,18 @@
-import User from "./User.js";
+
 
 class Landing {
-  use = new User();
-  constructor() {}
+
+  constructor(call,login) {this.login=login;this.call=call}
 
   loginEve() {
     const button = document.getElementById("from_button_login");
     button.onclick = (e) => {
-      this.onubmit(e);
+        this.call
+        this.onubmit(e);
     };
   }
 
-  onubmit(e) {
+ async onubmit(e) {
     e.preventDefault();
     const input = document.getElementById("input-from1");
     const input2 = document.getElementById("input-from2");
@@ -21,16 +22,21 @@ class Landing {
       email: input3.value,
       pass: input4.value,
       info: { prenom: input2.value, nom: input.value },
-    };
+    };this.setmessage("oui oui");
+    this.login(nom)
+   // this.login(nom)
+//console.log(this.call)    //window.location.hash = "";
+    //demande si c pas con l idée de l autre
+    //console.log(this.user);
+if(this.call(nom)){input.style.outline="green 5px solid"}else{input.style.outline="red 5px solid"};
+}
 
-    this.use.newUser(nom);
-    window.location.hash = "";
-    console.log("ok");
+
+     setmessage(str){
+      const notif = document.getElementById("notifiation");
+  
+      notif.innerText="notifier";
   }
-  isCon() {
-    let k = this.use.login();
-    console.log(k);
-    return k;
-  }
+
 }
 export default Landing;
