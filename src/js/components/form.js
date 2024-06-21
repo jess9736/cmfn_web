@@ -13,7 +13,10 @@ const froms = function (data) {
   
 
 ${section}
-</section>${button(data.button_login)}</from>
-`;
+</section>
+${button(data.button_login)}
+${button(data.button_login2)}
+
+</from>`;
 };
 export default froms;

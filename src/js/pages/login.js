@@ -1,7 +1,12 @@
+import connection from "../components/connection.js";
 import froms from "../components/form.js";
-const login = function () {
+const login = function (loc) {
   const data = {
-    button_login: "from_button_login",
+    button_login: { id: "from_button_login", value: "Valider" },
+    button_login2: {
+      id: "connection",
+      value: loc ? "se connecter" : "s'identifier",
+    },
     from_login: "from_group_login",
     tab: [
       {
@@ -29,7 +34,7 @@ const login = function () {
 
   return `
         <section class="login">
-        ${froms(data)}
+        ${loc ? froms(data) : connection(data)}
         
         </section>
         `;
