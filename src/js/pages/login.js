@@ -36,10 +36,7 @@ const login = function (loc) {
   return `
         <section class="login">
         ${loc ? froms(data) : connection(data)}
-        
-   
         <button type="rest" id="reset">reinisialisé </button>
- 
         </section>
         `;
 }; //pour mod un coponent on y crée un parent pouc touch le css de l'enfant

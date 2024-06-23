@@ -18,26 +18,32 @@ li a:hover {
   color: white;
 }
 
-
-.text{
+.text {
   border: none;
   padding: 10px 20px;
   background-color: #b99191;
 
-   position: relative; 
-   bottom:60%;
+  position: relative;
+  bottom: 60%;
 
-    color:#be4545;opacity: 0;transition: 2.5s ease ;
+  color: #be4545;
+  opacity: 0;
+  transition: 2.5s ease;
 }
 
-.contain{
-height: 150px;
+.contain {
+  height: 150px;
 }
-.contain:hover{ .image{opacity: 0.4};
-.text{opacity: 1; }}
+.contain:hover {
+  .image {
+    opacity: 0.4;
+  }
+  .text {
+    opacity: 1;
+  }
+}
 
-
-    .image {
+.image {
   opacity: 1;
   display: block;
 

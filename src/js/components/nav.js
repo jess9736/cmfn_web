@@ -6,7 +6,7 @@ const nav = function (name) {
       <li><a id="incr" href="#login">Incription</a></li>
       <li><a id="Test" href="#test">Test</a></li>
     </ul>`;
-  return (`  <strong><a>${name}</strong></a>`);
+  return `  <strong><a>${name}</strong></a>`;
 };
 
 export default nav;

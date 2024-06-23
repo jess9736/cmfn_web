@@ -31,10 +31,13 @@ class Landing {
       ];
       if (this.testElements(input)) {
         this.local = this.session(input[0].value, input[1].value);
-        if(!this.local){this.setmessage("erreur sur les champs")
+        if (!this.local) {
+          this.setmessage("erreur sur les champs");
           input[0].style.outline = "red 5px solid";
           input[1].style.outline = "red 5px solid";
-        }else{location.hash = "";}
+        } else {
+          location.hash = "";
+        }
         console.log(this.local);
       }
     };
@@ -57,13 +60,14 @@ class Landing {
         }
       });
     };
+
     button2.onclick = (e) => {
       e.preventDefault();
       location.hash = location.hash == "#login" ? "#connect" : "#login";
     };
   }
 
-   onubmit(e) {
+  onubmit(e) {
     e.preventDefault();
     let input = [
       document.getElementById("input-from1"),
@@ -77,14 +81,15 @@ class Landing {
       info: { prenom: input[1].value, nom: input[0].value },
     };
     if (this.testElements(input)) {
-      this.setmessage(this.login(nom)?
-      "creation réussie":
-      "tu as dejà crée un compte avec cette address mail");
-    }else this.setmessage("l'un des élément n'est pas bon")
+      this.setmessage(
+        this.login(nom)
+          ? "creation réussie"
+          : "tu as dejà crée un compte avec cette address mail",
+      );
+    } else this.setmessage("l'un des élément n'est pas bon");
   }
 
   testElements(input) {
-
     let IsPass = true;
     input.forEach((element) => {
       let oki = this.reg.exec(element.value);
@@ -98,13 +103,9 @@ class Landing {
     });
     return IsPass;
   }
-  // this.login(nom)
-  //console.log(this.call)    //window.location.hash = "";
-  //demande si c pas con l idée de l autre
 
   setmessage(str) {
     const notif = document.getElementById("notifiation");
-
     notif.innerText = str;
   }
 
@@ -113,6 +114,8 @@ class Landing {
       return this.local.info.nom;
     }
   }
-  disco(){this.local=null;}
+  disco() {
+    this.local = null;
+  }
 }
 export default Landing;

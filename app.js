@@ -25,10 +25,11 @@ const main = function (hash) {
       event.loginEve();
       break;
     case "#menu":
-     appel.getMenu().then((info)=>{
-      container.innerHTML += home( info)
-      console.log( info)})
-    
+      appel.getMenu().then((info) => {
+        container.innerHTML += home(info);
+        console.log(info);
+      });
+
       break;
     case "test":
       console.log("in ltest");
@@ -40,9 +41,9 @@ const main = function (hash) {
     case "":
       container.innerHTML = "salut";
       break;
-    case"#deco":
+    case "#deco":
       event.disco();
-      location.hash="";
+      location.hash = "";
     default:
       break;
   }
