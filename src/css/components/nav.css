@@ -8,13 +8,39 @@ ul {
 
 li a {
   display: block;
-  color: #000;
+  color: #4b97c7;
   padding: 8px 16px;
   text-decoration: none;
 }
 
-/* Change the link color on hover  backgroud-blen-mode */
 li a:hover {
-  background-color: #555;
+  background-color: #be4545;
   color: white;
+}
+
+
+.text{
+  border: none;
+  padding: 10px 20px;
+  background-color: #b99191;
+
+   position: relative; 
+   bottom:60%;
+
+    color:#be4545;opacity: 0;transition: 2.5s ease ;
+}
+
+.contain{
+height: 150px;
+}
+.contain:hover{ .image{opacity: 0.4};
+.text{opacity: 1; }}
+
+
+    .image {
+  opacity: 1;
+  display: block;
+
+  transition: 2.5s ease;
+  backface-visibility: hidden;
 }

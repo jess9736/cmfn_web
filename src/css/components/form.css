@@ -1,5 +1,6 @@
-#from_group_login {
-  max-width: 270px;
+#from_group_login,
+#from_connect_login {
+  max-width: 300px;
   margin: 0 auto;
   padding: 20px;
   background-color: #bbb5b5;

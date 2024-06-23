@@ -11,10 +11,9 @@ class RegExp2 {
   }
 
   test(str = "", int = 1) {
-    const array1 = [1, 5];
+    const array1 = [1, 5, "<", "/", ">", "=", " "];
     for (let i = 0; i < int; i++) {
       let lettre = str.substring(i, i + 1);
-
       const found = array1.find((element) => element == lettre);
 
       //console.log(found, "eklements ", lettre, i);

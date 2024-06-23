@@ -1,22 +1,30 @@
 class dats {
-  update() {
-    console.log("cool");
-  }
-
-  async sending(data) {
-    let send = localStorage.setItem("user data.id", JSON.stringify(data));
-
-    console.log(localStorage.getItem("user data.id"));
+  sending(data) {
+    let send = JSON.stringify(data);
+    if(!localStorage.getItem(data.email)){localStorage.setItem(data.email, send);return true}
+    console.log(send);
+    return false
   }
   getSession(email, pass) {
-    const local = localStorage.getItem("user data.id");
+try {
+    const local = JSON.parse(localStorage.getItem(email));  
+        if ( pass == local.pass) {
+      return local;
+    }
+ 
+} catch (error) {}
+return false  
 
-    console.log(local);
+  
   }
-  async getIng(url) {
-    let result = await fetch("/rgbj.json", { method: "GET" });
-    return result.json();
 
+  async getMenu(url) {
+//    let result = await fetch("https://chezbobo.onrender.com/products", { method: "GET" }).them(()=>{    return  result;})
+
+  const reponse = await fetch("https://chezbobo.onrender.com/products");
+  const rep = await reponse.json();
+  console.log(rep);
+return rep
     //use fetch().them((res)=>{}).catch((err)=>{})
     // const reponce=  await fetch("http://127.0.0.1:5500/rgbj.json",
     //   { header:{ "Content-Type": "application/json"},method:method

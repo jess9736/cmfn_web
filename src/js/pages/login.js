@@ -1,5 +1,6 @@
 import connection from "../components/connection.js";
 import froms from "../components/form.js";
+import input from "../components/input.js";
 const login = function (loc) {
   const data = {
     button_login: { id: "from_button_login", value: "Valider" },
@@ -36,6 +37,9 @@ const login = function (loc) {
         <section class="login">
         ${loc ? froms(data) : connection(data)}
         
+   
+        <button type="rest" id="reset">reinisialisé </button>
+ 
         </section>
         `;
 }; //pour mod un coponent on y crée un parent pouc touch le css de l'enfant
